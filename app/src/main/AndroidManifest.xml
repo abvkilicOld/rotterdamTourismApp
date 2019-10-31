@@ -19,6 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".HotelPage">
+        </activity>
+        <activity android:name=".Sights">
 
         </activity>
     </application>
