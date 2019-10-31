@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "967616745446",
+    "firebase_url": "https://rotterdam-tourism.firebaseio.com",
+    "project_id": "rotterdam-tourism",
+    "storage_bucket": "rotterdam-tourism.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:967616745446:android:9e77778fdc4703c5215027",
+        "android_client_info": {
+          "package_name": "com.example.rotterdamtourism"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "967616745446-jjge0cv8deviln2si9mc6ihrhf22iprp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rotterdamtourism",
+            "certificate_hash": "7d121a4818b9c1925daa4b19f18a5f0553201cdf"
+          }
+        },
+        {
+          "client_id": "967616745446-evkp4ub5pv1qgcg09o6ekcchqal4mpbi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQS10SJ64Ymjdu5qnyo6-wfB8qBZjrT24"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "967616745446-evkp4ub5pv1qgcg09o6ekcchqal4mpbi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Rotterdam Tourism</string>
+    <string name="access_token">pk.eyJ1IjoidGltb3BvbGRlcm1hbiIsImEiOiJjazI4cG85ZzkyZ2t0M25ueThjNjkzcGNiIn0.EOW9HhBKeij6qBQqjY7gQA</string>
 </resources>
