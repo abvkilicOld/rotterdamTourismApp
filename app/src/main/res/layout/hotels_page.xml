@@ -10,7 +10,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview_hotels"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="270dp"
         android:background="#FFFFFF"
         mapbox:layout_constraintBottom_toBottomOf="parent"
         mapbox:layout_constraintEnd_toEndOf="parent"
@@ -26,7 +26,7 @@
         mapbox:layout_constraintTop_toTopOf="parent"
         mapbox:mapbox_cameraTargetLat="51.9225"
         mapbox:mapbox_cameraTargetLng="4.47917"
-        mapbox:mapbox_cameraZoom="12"
+        mapbox:mapbox_cameraZoom="13"
         mapbox:mapbox_styleUrl="mapbox://styles/mapbox/streets-v10" />
 
     <TextView
