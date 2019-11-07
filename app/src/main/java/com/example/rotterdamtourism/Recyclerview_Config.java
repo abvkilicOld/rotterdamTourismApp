@@ -13,7 +13,15 @@ import java.util.List;
 
 public class Recyclerview_Config {
     private Context mContext;
+    private SightsContext mSightsContext;
     private HotelsAdapter mHotelsAdapter;
+    private SightsAdapter mSightsAdapter;
+    public voic setSightsConfig(RecyclerView recyclerView, Context contect, List<Sights> sights, List<String> keys){
+        mSightsContext = sightsContext;
+        mSightsAdapter = new SightsAdapter(sights, keys);
+        recyclerView.setLayoutManager(new LinearLayoutManager(context));
+        recyclerView.setAdapter(mSightsAdapter);
+    }
     public void setConfig(RecyclerView recyclerView, Context context, List<Hotel> hotels, List<String> keys){
         mContext = context;
         mHotelsAdapter = new HotelsAdapter(hotels, keys);
