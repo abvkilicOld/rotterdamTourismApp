@@ -14,10 +14,17 @@ import java.util.List;
 public class FirebaseDatabaseHelper {
     private FirebaseDatabase mDatabase;
     private DatabaseReference mReferenceHotels;
+    private DatabaseReference mReferenceSights;
     private List<Hotel> hotels = new ArrayList<>();
+    private List<Sights> sights = new ArrayList<>();
 
     public interface DataStatus {
         void DataIsLoaded(List<Hotel> hotels, List<String> keys);
+<<<<<<< Updated upstream
+        void SightsDataIsLoaded(List<Sights> sights, List<String> keys)
+=======
+        void SightsDataIsLoaded(List<Sights> sights, List<String> keys);
+>>>>>>> Stashed changes
         void DataIsInserted();
         void DataIsUpdated();
         void DataIsDeleted();
@@ -26,7 +33,45 @@ public class FirebaseDatabaseHelper {
     public FirebaseDatabaseHelper() {
         mDatabase = FirebaseDatabase.getInstance();
         mReferenceHotels = mDatabase.getReference("Hotels");
+        mReferenceSights = mDatabase.getReference("Sights");
     }
+
+<<<<<<< Updated upstream
+
+=======
+>>>>>>> Stashed changes
+    public void readSights (final DataStatus dataStatus) {
+        mReferenceSights.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                sights.clear();
+                List<String> keys = new ArrayList<>();
+                for (DataSnapshot keyNode : dataSnapshot.getChildren()) {
+                    keys.add(keyNode.getKey());
+<<<<<<< Updated upstream
+                    Sights sights = keyNode.getValue(Sights.class);
+                    sights.add(sights);
+=======
+                    Sights sight = keyNode.getValue(Sights.class);
+                    sights.add(sight);
+>>>>>>> Stashed changes
+                }
+                dataStatus.SightsDataIsLoaded(sights, keys);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+    }
+<<<<<<< Updated upstream
+}
+=======
+>>>>>>> Stashed changes
+
 
     public void readHotels (final DataStatus dataStatus) {
         mReferenceHotels.addValueEventListener(new ValueEventListener() {
