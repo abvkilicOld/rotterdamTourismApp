@@ -45,6 +45,7 @@ public class SightsPage extends AppCompatActivity implements OnMapReadyCallback,
         mapView = (MapView) findViewById(R.id.mapView);
         mapView.onCreate(savedInstanceState);
         mapView.getMapAsync(this);
+<<<<<<< Updated upstream
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerview_sights);
         new FirebaseDatabaseHelper().readSights(new FirebaseDatabaseHelper.DataStatus() {
             @Override
@@ -68,6 +69,10 @@ public class SightsPage extends AppCompatActivity implements OnMapReadyCallback,
             }
         });
     }
+=======
+        mRecyclerView = (RecyclerView) findViewById(R.id.recyclerview_hotels);
+        }
+>>>>>>> Stashed changes
 
 
 

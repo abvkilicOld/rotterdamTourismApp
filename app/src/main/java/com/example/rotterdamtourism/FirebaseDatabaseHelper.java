@@ -20,7 +20,11 @@ public class FirebaseDatabaseHelper {
 
     public interface DataStatus {
         void DataIsLoaded(List<Hotel> hotels, List<String> keys);
+<<<<<<< Updated upstream
         void SightsDataIsLoaded(List<Sights> sights, List<String> keys)
+=======
+        void SightsDataIsLoaded(List<Sights> sights, List<String> keys);
+>>>>>>> Stashed changes
         void DataIsInserted();
         void DataIsUpdated();
         void DataIsDeleted();
@@ -32,7 +36,10 @@ public class FirebaseDatabaseHelper {
         mReferenceSights = mDatabase.getReference("Sights");
     }
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     public void readSights (final DataStatus dataStatus) {
         mReferenceSights.addValueEventListener(new ValueEventListener() {
             @Override
@@ -41,8 +48,13 @@ public class FirebaseDatabaseHelper {
                 List<String> keys = new ArrayList<>();
                 for (DataSnapshot keyNode : dataSnapshot.getChildren()) {
                     keys.add(keyNode.getKey());
+<<<<<<< Updated upstream
                     Sights sights = keyNode.getValue(Sights.class);
                     sights.add(sights);
+=======
+                    Sights sight = keyNode.getValue(Sights.class);
+                    sights.add(sight);
+>>>>>>> Stashed changes
                 }
                 dataStatus.SightsDataIsLoaded(sights, keys);
 
@@ -55,7 +67,10 @@ public class FirebaseDatabaseHelper {
         });
 
     }
+<<<<<<< Updated upstream
 }
+=======
+>>>>>>> Stashed changes
 
 
     public void readHotels (final DataStatus dataStatus) {

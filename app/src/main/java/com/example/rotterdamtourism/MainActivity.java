@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void openSights()  {
-        Intent intent = new Intent(this, Sights.class);
+        Intent intent = new Intent(this, SightsPage.class);
         startActivity(intent);
     }
 }

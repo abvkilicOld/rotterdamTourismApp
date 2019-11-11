@@ -4,12 +4,20 @@ public class Sights {
     private String adres;
     private String name;
 
+<<<<<<< Updated upstream
     public Sights (String adres, String name) {
+=======
+    public Sights(String adres, String name){
+>>>>>>> Stashed changes
         this.adres = adres;
         this.name = name;
     }
 
+<<<<<<< Updated upstream
     public Sights() {
+=======
+    public Sights(){
+>>>>>>> Stashed changes
     }
 
     public String getAdres() {
