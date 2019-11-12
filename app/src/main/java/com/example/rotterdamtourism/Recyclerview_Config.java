@@ -1,7 +1,10 @@
 package com.example.rotterdamtourism;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
@@ -11,9 +14,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+
+
 public class Recyclerview_Config {
     private Context mContext;
     private HotelsAdapter mHotelsAdapter;
+
+
+
     public void setConfig(RecyclerView recyclerView, Context context, List<Hotel> hotels, List<String> keys){
         mContext = context;
         mHotelsAdapter = new HotelsAdapter(hotels, keys);
@@ -25,6 +33,7 @@ public class Recyclerview_Config {
         private TextView mAdress;
         private TextView mName;
 
+
         private String key;
 
         public HotelItemView(ViewGroup parent) {
@@ -34,13 +43,24 @@ public class Recyclerview_Config {
             mAdress = (TextView) itemView.findViewById(R.id.adres_textView);
             mName = (TextView) itemView.findViewById(R.id.name_txtView);
 
+
+
         }
 
         public void bind(Hotel hotel, String key) {
             mAdress.setText(hotel.getAdres());
             mName.setText(hotel.getName());
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(mContext, newactivity.class);
+                    mContext.startActivity(intent);
+                }
+            });
             this.key = key;
         }
+
+
     }
 
     class HotelsAdapter extends RecyclerView.Adapter<HotelItemView> {
@@ -62,6 +82,7 @@ public class Recyclerview_Config {
         public void onBindViewHolder(@NonNull HotelItemView holder, int position) {
             holder.bind(mHotelList.get(position), mKeys.get(position));
 
+
         }
 
         @Override
@@ -69,4 +90,5 @@ public class Recyclerview_Config {
             return mHotelList.size();
         }
     }
+
 }

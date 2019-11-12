@@ -1,5 +1,6 @@
 package com.example.rotterdamtourism;
 
+import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
 import android.widget.ListView;
@@ -35,6 +36,7 @@ public class HotelPage extends AppCompatActivity implements OnMapReadyCallback, 
     private LocationLayerPlugin locationLayerPlugin;
     private Location originLocation;
     private RecyclerView mRecyclerView;
+
 
 
     @Override
@@ -206,6 +208,5 @@ public class HotelPage extends AppCompatActivity implements OnMapReadyCallback, 
         }
         mapView.onDestroy();
     }
-
 
 }
