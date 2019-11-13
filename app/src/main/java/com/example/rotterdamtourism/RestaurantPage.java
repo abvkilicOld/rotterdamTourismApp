@@ -1,16 +1,12 @@
 package com.example.rotterdamtourism;
 
-import android.content.Context;
 import android.location.Location;
-import android.net.Uri;
 import android.os.Bundle;
+import android.widget.ListView;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.mapbox.android.core.location.LocationEngine;
 import com.mapbox.android.core.location.LocationEngineListener;
@@ -30,7 +26,7 @@ import com.mapbox.mapboxsdk.plugins.locationlayer.modes.RenderMode;
 
 import java.util.List;
 
-public class RestaurantPage extends Fragment implements OnMapReadyCallback, LocationEngineListener, PermissionsListener {
+public class RestaurantPage extends AppCompatActivity implements OnMapReadyCallback, LocationEngineListener, PermissionsListener {
 
     private MapView mapView;
     private MapboxMap map;
@@ -38,13 +34,14 @@ public class RestaurantPage extends Fragment implements OnMapReadyCallback, Loca
     private LocationEngine locationEngine;
     private LocationLayerPlugin locationLayerPlugin;
     private Location originLocation;
+    private RecyclerView mRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Mapbox.getInstance(this, getString(R.string.access_token));
         setContentView(R.layout.restaurant_page);
-        mapView = (MapView) findViewvById(R.id.mapView);
+        mapView = (MapView) findViewById(R.id.mapView);
         mapView.onCreate(savedInstanceState);
         mapView.getMapAsync(this);
     }
